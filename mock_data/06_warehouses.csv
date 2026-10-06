@@ -1,0 +1,9 @@
+warehouse_id,location_id,warehouse_name,zone,created_at
+1,1,Berlin Main Store,general,2026-04-01
+2,1,Berlin Chemical Room,chemical_rack,2026-04-01
+3,2,München Main Store,general,2026-04-01
+4,2,München Cold Storage,cold_storage,2026-04-01
+5,3,Hamburg Factory Store,general,2026-04-01
+6,3,Hamburg Hazmat Cabinet,chemical_rack,2026-04-01
+7,4,Frankfurt Main Store,general,2026-04-01
+8,4,Frankfurt Minibar Hub,minibar_shelf,2026-04-01

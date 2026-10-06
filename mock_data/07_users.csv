@@ -1,0 +1,21 @@
+user_id,full_name,role,location_id,is_active,created_at
+1,Erika Hartmann,admin,1,True,2026-04-01
+2,Wolfgang Meier,procurement,1,True,2026-04-01
+3,Claudia Zimmermann,warehouse_staff,1,True,2026-04-01
+4,Jürgen Hoffmann,housekeeping,1,True,2026-04-01
+5,Sabrina Lang,front_desk,1,True,2026-04-01
+6,Markus Vogt,manager,2,True,2026-04-01
+7,Heike Baumann,procurement,2,True,2026-04-01
+8,Ralf Schubert,warehouse_staff,2,True,2026-04-01
+9,Monika Lehmann,housekeeping,2,True,2026-04-01
+10,Tobias Winkler,front_desk,2,True,2026-04-01
+11,Bernd Krause,manager,3,True,2026-04-01
+12,Sandra Engel,procurement,3,True,2026-04-01
+13,Uwe Richter,warehouse_staff,3,True,2026-04-01
+14,Anja Wolff,housekeeping,3,True,2026-04-01
+15,Lars Dietrich,warehouse_staff,3,True,2026-04-01
+16,Karin Neumann,manager,4,True,2026-04-01
+17,Florian Beck,procurement,4,True,2026-04-01
+18,Petra Schreiber,warehouse_staff,4,True,2026-04-01
+19,Dirk Schwarz,housekeeping,4,True,2026-04-01
+20,Nina Böhm,front_desk,4,True,2026-04-01

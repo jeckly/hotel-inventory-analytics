@@ -1,0 +1,41 @@
+item_id,category_id,item_code,item_name,brand,purchase_uom,usage_uom,conversion_factor,unit_cost,selling_price,reorder_point,is_hazardous,is_active,created_at,updated_at
+1,1,AMN-001,Bath Soap 30g,CleanLux,carton,piece,200,0.15,,500,False,True,2026-04-01,2026-04-01
+2,1,AMN-002,Shampoo Bottle 30ml,CleanLux,carton,piece,144,0.22,,400,False,True,2026-04-01,2026-04-01
+3,1,AMN-003,Conditioner 30ml,CleanLux,carton,piece,144,0.22,,300,False,True,2026-04-01,2026-04-01
+4,1,AMN-004,Body Lotion 30ml,CleanLux,carton,piece,144,0.25,,300,False,True,2026-04-01,2026-04-01
+5,1,AMN-005,Dental Kit,FreshSmile,carton,piece,100,0.3,,400,False,True,2026-04-01,2026-04-01
+6,1,AMN-006,Shower Cap,HotelBasics,carton,piece,500,0.05,,600,False,True,2026-04-01,2026-04-01
+7,1,AMN-007,Sewing Kit,HotelBasics,carton,piece,100,0.4,,100,False,True,2026-04-01,2026-04-01
+8,1,AMN-008,Razor Kit,SharpEdge,carton,piece,50,0.55,,150,False,True,2026-04-01,2026-04-01
+9,1,AMN-009,Comb,HotelBasics,carton,piece,200,0.08,,300,False,True,2026-04-01,2026-04-01
+10,1,AMN-010,Disposable Slippers,ComfortStep,carton,pair,100,0.45,,300,False,True,2026-04-01,2026-04-01
+11,1,AMN-011,Cotton Buds Pack,SoftTouch,carton,pack,200,0.1,,200,False,True,2026-04-01,2026-04-01
+12,1,AMN-012,Tissue Box,SoftTouch,carton,box,48,0.6,,200,False,True,2026-04-01,2026-04-01
+13,1,AMN-013,Toilet Paper Roll,SoftTouch,carton,roll,96,0.35,,500,False,True,2026-04-01,2026-04-01
+14,1,AMN-014,Vanity Kit,HotelBasics,carton,piece,100,0.5,,100,False,True,2026-04-01,2026-04-01
+15,2,CHM-001,Floor Cleaner 5L,ProClean,drum,liter,20,2.5,,40,False,True,2026-04-01,2026-04-01
+16,2,CHM-002,Glass Cleaner 1L,ProClean,carton,bottle,12,3.2,,30,False,True,2026-04-01,2026-04-01
+17,2,CHM-003,Disinfectant Concentrate 5L,BioGuard,drum,liter,20,4.8,,50,True,True,2026-04-01,2026-04-01
+18,2,CHM-004,Toilet Bowl Cleaner 1L,ProClean,carton,bottle,12,2.1,,30,False,True,2026-04-01,2026-04-01
+19,2,CHM-005,Hand Sanitizer Gel 500ml,BioGuard,carton,bottle,24,1.9,,60,False,True,2026-04-01,2026-04-01
+20,2,CHM-006,Laundry Detergent 20kg,WashPro,bag,kg,20,1.8,,25,False,True,2026-04-01,2026-04-01
+21,2,CHM-007,Bleach Solution 5L,BioGuard,drum,liter,20,1.5,,30,True,True,2026-04-01,2026-04-01
+22,2,CHM-008,Kitchen Degreaser 5L,ProClean,drum,liter,20,3.6,,20,True,True,2026-04-01,2026-04-01
+23,2,CHM-009,Air Freshener Spray 500ml,FreshAir,carton,can,24,2.2,,40,False,True,2026-04-01,2026-04-01
+24,2,CHM-010,Stainless Steel Polish 1L,ShinyMax,carton,bottle,12,5.5,,15,False,True,2026-04-01,2026-04-01
+25,3,MNB-001,Coca-Cola 330ml,Coca-Cola,crate,can,24,0.6,3.5,200,False,True,2026-04-01,2026-04-01
+26,3,MNB-002,Sprite 330ml,Coca-Cola,crate,can,24,0.55,3.5,150,False,True,2026-04-01,2026-04-01
+27,3,MNB-003,Mineral Water 500ml,Gerolsteiner,crate,bottle,24,0.3,2.5,300,False,True,2026-04-01,2026-04-01
+28,3,MNB-004,Orange Juice 200ml,Hohes C,carton,pack,12,0.8,4.0,100,False,True,2026-04-01,2026-04-01
+29,3,MNB-005,Pilsner Beer 330ml,Bitburger,crate,bottle,24,0.7,4.5,200,False,True,2026-04-01,2026-04-01
+30,3,MNB-006,Red Wine 187ml,Dornfelder,carton,bottle,6,2.5,8.0,50,False,True,2026-04-01,2026-04-01
+31,3,MNB-007,White Wine 187ml,Riesling,carton,bottle,6,2.8,8.5,50,False,True,2026-04-01,2026-04-01
+32,3,MNB-008,Pringles Original 40g,Pringles,carton,tube,12,1.2,4.5,100,False,True,2026-04-01,2026-04-01
+33,3,MNB-009,Chocolate Bar 50g,Ritter Sport,carton,piece,24,0.8,3.5,120,False,True,2026-04-01,2026-04-01
+34,3,MNB-010,Mixed Nuts 40g,Ültje,carton,pack,20,0.9,4.0,80,False,True,2026-04-01,2026-04-01
+35,3,MNB-011,Gummy Bears 100g,Haribo,carton,pack,30,0.5,3.0,100,False,True,2026-04-01,2026-04-01
+36,3,MNB-012,KitKat 45g,Nestlé,carton,piece,24,0.7,3.5,100,False,True,2026-04-01,2026-04-01
+37,3,MNB-013,Toblerone 50g,Toblerone,carton,piece,24,1.1,5.0,80,False,True,2026-04-01,2026-04-01
+38,3,MNB-014,Sparkling Water 330ml,Gerolsteiner,crate,bottle,24,0.35,2.5,200,False,True,2026-04-01,2026-04-01
+39,3,MNB-015,Energy Drink 250ml,Red Bull,carton,can,24,1.3,5.5,100,False,True,2026-04-01,2026-04-01
+40,3,MNB-016,Instant Noodle Cup,Maggi,carton,cup,12,0.6,4.0,60,False,True,2026-04-01,2026-04-01

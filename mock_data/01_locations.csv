@@ -1,0 +1,5 @@
+location_id,location_name,location_type,address,city,country,created_at
+1,Grand Hotel Berlin,hotel,Unter den Linden 15,Berlin,Germany,2026-04-01
+2,Riverside Hotel München,hotel,Maximilianstraße 42,München,Germany,2026-04-01
+3,Harbor Factory Hamburg,factory,Hafenstraße 88,Hamburg,Germany,2026-04-01
+4,City Hotel Frankfurt,hotel,Kaiserstraße 7,Frankfurt,Germany,2026-04-01

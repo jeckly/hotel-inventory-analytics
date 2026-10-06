@@ -1,0 +1,13 @@
+supplier_id,supplier_name,contact_person,phone,email,address,city,country,lead_time_days,is_active,created_at
+1,Müller Hygiene GmbH,Hans Müller,+49 70 2867825,hans@gmbh.de,Hauptstr. 115,Berlin,Germany,13,True,2026-04-01
+2,Schmidt Chemie AG,Petra Schmidt,+49 31 5614226,petra@ag.de,Am Markt 72,München,Germany,9,True,2026-04-01
+3,Fischer Gastro Supplies,Klaus Fischer,+49 45 4744854,klaus@supplies.de,Industriestr. 195,Hamburg,Germany,10,True,2026-04-01
+4,Weber Reinigung KG,Anna Weber,+49 38 2719583,anna@kg.de,Hauptstr. 179,Düsseldorf,Germany,3,True,2026-04-01
+5,Becker Hotel Amenities,Stefan Becker,+49 73 2458591,stefan@amenities.de,Berliner Str. 88,Köln,Germany,8,True,2026-04-01
+6,Hoffmann Getränke GmbH,Julia Hoffmann,+49 67 8078673,julia@gmbh.de,Bahnhofstr. 40,Stuttgart,Germany,3,True,2026-04-01
+7,Braun Industrial Chemicals,Thomas Braun,+49 32 1499914,thomas@chemicals.de,Hauptstr. 196,Frankfurt,Germany,10,True,2026-04-01
+8,Wagner Supply Co.,Maria Wagner,+49 35 4668136,maria@co..de,Bahnhofstr. 27,Leipzig,Germany,6,True,2026-04-01
+9,Krüger Minibar Services,Michael Krüger,+49 44 9478454,michael@services.de,Industriestr. 98,Bremen,Germany,12,True,2026-04-01
+10,Schneider Wholesale,Sabine Schneider,+49 68 1445199,sabine@wholesale.de,Industriestr. 92,Dresden,Germany,11,True,2026-04-01
+11,Richter Logistik,Frank Richter,+49 65 4335942,frank@logistik.de,Bahnhofstr. 155,Hannover,Germany,7,True,2026-04-01
+12,Klein Verpackung GmbH,Katrin Klein,+49 75 8038374,katrin@gmbh.de,Bahnhofstr. 12,Nürnberg,Germany,11,False,2026-04-01
