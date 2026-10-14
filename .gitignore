@@ -1,3 +1,8 @@
+# Personal Reflection & Career Evaluation Workbook
+Buku_Besar_Evaluasi_dan_Refleksi_Kerja.xlsx
+build_reflection_excel.py
+*.xlsx
+
 # Large Installer Executables (GitHub limits files to <100MB)
 *.exe
 postgresql-16-installer.exe

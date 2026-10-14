@@ -69,11 +69,85 @@ col4.metric("Phantom Return Shrinkage", f"€{phantom_loss:,.2f}", delta="11 Aud
 st.divider()
 
 # ── Navigation Tabs ───────────────────────────────────────────
-tab1, tab2, tab3 = st.tabs([
+tab_audit, tab1, tab2, tab3 = st.tabs([
+    "🚨 Forensic Audit & Incident Center",
     "📈 Anomaly 1: Month-End Hoarding Spike",
     "🕵️ Anomaly 2: Minibar Phantom Returns Audit",
     "⚠️ Reorder Point & Safety Stock Alerts",
 ])
+
+# ═════════════════════════════════════════════════════════════
+# TAB 0: FORENSIC AUDIT & INCIDENT CENTER (v2.0)
+# ═════════════════════════════════════════════════════════════
+with tab_audit:
+    st.subheader("🚨 Real-Time Forensic Audit & Anomaly Detection Center (v2.0)")
+    st.markdown(
+        "Autonomous anomaly surveillance powered by database triggers (`trg_audit_anomaly_check`) "
+        "and persistent audit logging (`audit_logs`)."
+    )
+
+    # Top summary metrics
+    m1, m2, m3 = st.columns(3)
+    m1.metric("Total Dana Berisiko (Capital at Risk)", "€71,812.63", delta="1,028 Anomaly Events", delta_color="inverse")
+    m2.metric("Kasus Retur Fiktif (Phantom Returns)", "71 Incidents", delta="€905.90 Shrinkage", delta_color="inverse")
+    m3.metric("Lonjakan Akhir Bulan (Hoarding Alerts)", "957 Incidents", delta="€70,906.73 Budget Flushing", delta_color="inverse")
+
+    st.divider()
+
+    def style_severity(val):
+        if str(val) == "CRITICAL":
+            return "background-color: #f8d7da; color: #721c24; font-weight: bold;"
+        elif str(val) in ("HIGH", "MEDIUM"):
+            return "background-color: #fff3cd; color: #856404; font-weight: bold;"
+        return ""
+
+    # Section 1: Executive Audit Summary (v_audit_summary)
+    st.markdown("### 📊 Executive Audit Summary (`v_audit_summary`)")
+    q_summary = """
+        SELECT 
+            flag_type,
+            severity_level,
+            total_incidents,
+            total_discrepancy_units,
+            estimated_financial_impact_eur AS financial_impact_eur,
+            first_incident_date,
+            latest_incident_date
+        FROM v_audit_summary;
+    """
+    df_summary = pd.read_sql(q_summary, conn)
+
+    st.dataframe(
+        df_summary.style.map(style_severity, subset=["severity_level"]),
+        width="stretch",
+        hide_index=True
+    )
+
+    # Section 2: Recent 20 Suspicious Transactions from audit_logs
+    st.markdown("### 🔍 20 Log Transaksi Mencurigakan Terbaru (`audit_logs`)")
+    q_recent = """
+        SELECT 
+            al.log_id,
+            al.log_timestamp::TIMESTAMP(0) AS timestamp,
+            al.flag_type,
+            al.severity_level,
+            al.discrepancy_amount AS discrepancy_qty,
+            al.discrepancy_unit AS unit,
+            COALESCE(t.reference_no, 'N/A') AS reference_no,
+            COALESCE(i.item_name, 'Multiple / Header') AS affected_item,
+            al.details
+        FROM audit_logs al
+        LEFT JOIN transactions t ON al.transaction_id = t.txn_id
+        LEFT JOIN items i ON al.item_id = i.item_id
+        ORDER BY al.log_timestamp DESC, al.log_id DESC
+        LIMIT 20;
+    """
+    df_recent = pd.read_sql(q_recent, conn)
+
+    st.dataframe(
+        df_recent.style.map(style_severity, subset=["severity_level"]),
+        width="stretch",
+        hide_index=True
+    )
 
 # ═════════════════════════════════════════════════════════════
 # TAB 1: HOARDING SPIKE
