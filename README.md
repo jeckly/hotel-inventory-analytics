@@ -284,6 +284,18 @@ To prevent inventory discrepancies between physical requisitions and digital led
 - **Negative Stock & Overdraw Safeguard**: Evaluates real-time availability prior to updating; aborts transactions with `Stock Depletion Breach` exception if requested quantity exceeds available physical stock.
 - **Batch & FEFO Prioritization**: Supports specific batch requisitions while automatically prioritizing earliest expiring lots (FEFO) for unassigned requests.
 
+### 5. Automated Month-End Stock Opname & Reconciliation (`05_reconciliation.sql`)
+To eliminate manual calculation errors during monthly stock opname, Stored Procedure `sp_reconcile_physical_inventory(p_audit_date DATE)` automates the reconciliation cycle:
+- **Discrepancy Variance Computation**: Audits physical count figures against digital ledger balances across all warehouses.
+- **Autonomous Forensic Incident Logging**: Automatically identifies stock shrinkage/leakage and inserts incident records directly into `audit_logs` under the `'STOCK_DISCREPANCY'` flag with classified severity (`CRITICAL`, `HIGH`, `MEDIUM`).
+- **Real-Time Ledger Alignment**: Synchronizes `inventory_stock.qty_on_hand` to match verified physical reality in a single atomic transaction.
+
+### 6. Automated Multi-Sheet Executive Excel Reporting (`06_export_excel.py`)
+An automated reporting pipeline (`openpyxl` & `psycopg2`) generates C-level audit dossiers (`reports/Executive_Audit_Report.xlsx`) with dark-navy styling, formatted currency, KPI summaries, and auto-fitted column widths:
+- **Sheet 1: Executive Summary & KPIs**: High-level exposure metrics, incident frequency, and total at-risk capital.
+- **Sheet 2: Critical Incident Logs**: Granular top 50 high-severity anomalies with investigation notes.
+- **Sheet 3: Stock Reconciliation Audit**: Detailed line-by-line stock opname audit outcomes (system vs physical variance and monetary loss).
+
 ---
 
 ## 🛡️ Recommended Standard Operating Procedures (SOPs)
@@ -315,6 +327,8 @@ cool-pascal/
 ├── import_csv.sql               # Bulk \COPY import script with sequence resets
 ├── 04_audit_system.sql          # Forensic Audit Logs, Triggers & Summary View (v2.0)
 ├── 05_auto_deduct_trigger.sql   # Real-Time Stock Deduction Engine & Safeguards (v2.1)
+├── 05_reconciliation.sql        # Monthly Stock Opname & Reconciliation Procedure (v2.2)
+├── 06_export_excel.py           # Automated Executive Excel Audit Report Generator
 ├── generate_mock_data.py        # Python synthetic data generator (5,389 records)
 ├── setup_and_import_postgres.py # Automated DB setup & psycopg2 pipeline
 ├── generate_visualizations.py   # High-resolution Seaborn & Matplotlib chart generator
@@ -332,7 +346,8 @@ cool-pascal/
 │   ├── 09_transactions.csv
 │   └── 10_transaction_lines.csv
 │
-└── reports/                     # Analytical Visual Assets (300 DPI)
+└── reports/                     # Analytical Visual & Reporting Assets
+    ├── Executive_Audit_Report.xlsx
     ├── hoarding_spike_analysis.png
     └── minibar_audit_analysis.png
 ```

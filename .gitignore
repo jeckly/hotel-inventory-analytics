@@ -1,7 +1,8 @@
-# Personal Reflection & Career Evaluation Workbook
+# Personal Reflection & Career Evaluation Workbook (Keep Private)
 Buku_Besar_Evaluasi_dan_Refleksi_Kerja.xlsx
 build_reflection_excel.py
 *.xlsx
+!reports/*.xlsx
 
 # Large Installer Executables (GitHub limits files to <100MB)
 *.exe
