@@ -278,6 +278,12 @@ By executing forensic audit queries against the operational history, the automat
 - **`PHANTOM_RETURN` (71 Incidents, €905.90)**:
   - 71 individual product line items across 11 falsified return vouchers where room attendants claimed goods were returned, but physical warehouse shelves received 0 units—confirming physical theft/leakage.
 
+### 4. Real-Time Automated Stock Deduction Engine (`trg_auto_deduct_stock`)
+To prevent inventory discrepancies between physical requisitions and digital ledger counts, the PostgreSQL trigger `trg_auto_deduct_stock` (`05_auto_deduct_trigger.sql`) executes immediately upon every department stock-out transaction (`ISSUE`):
+- **Autonomous Deduction**: Decrements `qty_on_hand` in `inventory_stock` matching the line item ID, warehouse ID, and batch allocation.
+- **Negative Stock & Overdraw Safeguard**: Evaluates real-time availability prior to updating; aborts transactions with `Stock Depletion Breach` exception if requested quantity exceeds available physical stock.
+- **Batch & FEFO Prioritization**: Supports specific batch requisitions while automatically prioritizing earliest expiring lots (FEFO) for unassigned requests.
+
 ---
 
 ## 🛡️ Recommended Standard Operating Procedures (SOPs)
@@ -308,6 +314,7 @@ cool-pascal/
 ├── schema_ddl.sql               # PostgreSQL 3NF DDL (Tables, Constraints, Indexes)
 ├── import_csv.sql               # Bulk \COPY import script with sequence resets
 ├── 04_audit_system.sql          # Forensic Audit Logs, Triggers & Summary View (v2.0)
+├── 05_auto_deduct_trigger.sql   # Real-Time Stock Deduction Engine & Safeguards (v2.1)
 ├── generate_mock_data.py        # Python synthetic data generator (5,389 records)
 ├── setup_and_import_postgres.py # Automated DB setup & psycopg2 pipeline
 ├── generate_visualizations.py   # High-resolution Seaborn & Matplotlib chart generator
